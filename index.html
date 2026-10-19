@@ -51,14 +51,11 @@
   <span class="hero-eyebrow">Bakari Studios</span>
 
   <div class="hero-media" id="heroMedia">
-    <!-- FALLBACK: shown until a real video is added. Safe to keep as backup on slow connections. -->
+    <!-- FALLBACK: shown behind the video while it loads. -->
     <div class="hero-fallback"></div>
-    <!-- REPLACE: uncomment below and point to the final hero reel -->
-    <!--
-    <video autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg">
       <source src="assets/hero-reel.mp4" type="video/mp4">
     </video>
-    -->
   </div>
 
   <div class="hero-inner">
@@ -75,7 +72,6 @@
     </div>
   </div>
 
-  <div class="scroll-cue"></div>
 </section>
 
 <!-- ABOUT -->
@@ -184,10 +180,7 @@
     <div class="work-grid">
 
       <a class="work-card reveal" href="https://www.youtube.com/watch?v=REPLACE_WITH_LEGENDS_BARBER_ID" target="_blank" rel="noopener" aria-label="Watch the Legends Barber project video on YouTube">
-        <!-- FALLBACK thumbnail — replace this div with a real <img> tag and a
-             descriptive alt attribute once the client supplies project photos,
-             e.g. <img class="thumb" src="legends-barber.jpg" alt="Legends Barber team apparel"> -->
-        <div class="thumb" style="background:linear-gradient(160deg,#3a2f26,#141210);"></div>
+        <img class="thumb" src="assets/work/legends-barber.png" alt="Still from the Legends Barber film, Right on Time">
         <div class="work-card-info">
           <div>
             <div class="title">Legends-Barber</div>
@@ -253,19 +246,15 @@
       <!-- REPLACE: atmospheric lifestyle/behind-the-scenes photo of Bakari Studios at work.
            If replaced with an <img> instead of a CSS background, include a
            descriptive alt attribute, e.g. alt="Bakari Studios team on set". -->
-      <p class="statement">Good brands don't just sell. They belong.</p>
+      <div class="statement-block">
+        <p class="statement">Good brands don’t just sell. They belong.</p>
+        <p class="statement-sub">We turn ideas into stories, experiences, and work that people remember.</p>
+      </div>
     </div>
 
     <div class="editorial-panel editorial-cta reveal reveal-delay-1">
       <h3>Got an idea?</h3>
       <a href="#contactForm" class="cta-btn">Tell Us About It <span class="arrow">→</span></a>
-    </div>
-
-    <div class="editorial-panel editorial-image material reveal reveal-delay-2">
-      <!-- REPLACE: close-up texture/material shot — knitwear, stitching, fabric detail.
-           If replaced with an <img> instead of a CSS background, include a
-           descriptive alt attribute, e.g. alt="Close-up of Bakari knitwear stitching". -->
-      <p class="statement" style="max-width:260px;">We turn ideas into stories, experiences, and work that people remember.</p>
     </div>
 
   </div>
