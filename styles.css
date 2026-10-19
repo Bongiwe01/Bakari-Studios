@@ -490,7 +490,7 @@ section{padding:120px clamp(20px,4vw,64px);}
 .editorial-grid{
   display:grid;
   grid-template-columns:1.1fr 1fr;
-  min-height:520px;
+  min-height:420px;
 }
 .editorial-panel{
   position:relative;
@@ -546,7 +546,25 @@ section{padding:120px clamp(20px,4vw,64px);}
 }
 
 /* ---------- Contact ---------- */
-#contact{padding:0;background:var(--cream);}
+#contact{
+  position:relative;
+  overflow:hidden;
+  padding:0;
+  background:var(--cream);
+}
+#contact::before{
+  content:"";
+  position:absolute;
+  left:39%;
+  bottom:-10%;
+  height:104%;
+  aspect-ratio:1333 / 1449;
+  transform:translateX(-50%);
+  background:url("assets/logos/bakari-tree-watermark.svg") center / contain no-repeat;
+  opacity:0.065;
+  pointer-events:none;
+}
+#contact .contact-grid{position:relative;z-index:1;}
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 1.1fr;
@@ -559,7 +577,7 @@ section{padding:120px clamp(20px,4vw,64px);}
   flex-direction:column;
   justify-content:center;
   color:var(--ink);
-  background:var(--cream);
+  background:transparent;
 }
 .contact-left .eyebrow{color:var(--ink-soft);}
 .contact-left h2{
@@ -585,9 +603,9 @@ section{padding:120px clamp(20px,4vw,64px);}
 .contact-detail-link{
   display:inline-flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
   width:fit-content;
-  font-size:14px;
+  font-size:16px;
   color:var(--ink-soft);
 }
 .contact-detail-link span{
@@ -600,8 +618,8 @@ section{padding:120px clamp(20px,4vw,64px);}
   border-color:var(--ink);
 }
 .contact-detail-icon{
-  width:16px;
-  height:16px;
+  width:19px;
+  height:19px;
   flex-shrink:0;
   color:var(--ink-soft);
   transition:color 0.3s var(--ease);
@@ -609,10 +627,11 @@ section{padding:120px clamp(20px,4vw,64px);}
 .contact-detail-link:hover .contact-detail-icon{color:var(--ink);}
 
 .contact-right{
-  background:var(--cream);
-  padding:96px 64px;
+  background:transparent;
+  padding:80px 64px;
   display:flex;
   align-items:center;
+  justify-content:center;
 }
 form.contact-form{width:100%;max-width:440px;scroll-margin-top:100px;}
 .form-row{margin-bottom:26px;}
@@ -673,7 +692,8 @@ form.contact-form{width:100%;max-width:440px;scroll-margin-top:100px;}
 
 @media(max-width:900px){
   .contact-grid{grid-template-columns:1fr;min-height:auto;}
-  .contact-left, .contact-right{padding:64px clamp(20px,6vw,64px);}
+  #contact::before{left:78%;bottom:-3%;height:34%;opacity:0.05;}
+  .contact-left, .contact-right{padding:56px clamp(20px,6vw,64px);}
 }
 
 /* ---------- Footer ---------- */
