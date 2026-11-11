@@ -267,6 +267,14 @@ section{padding:120px clamp(20px,4vw,64px);}
   color:var(--ink-soft);
   max-width:620px;
 }
+.about-copy p.about-line{
+  margin-top:26px;
+  font-family:var(--serif);
+  font-size:clamp(22px,2.4vw,28px);
+  line-height:1.3;
+  color:var(--ink);
+  max-width:none;
+}
 .about-copy .explore{
   display:inline-flex;
   align-items:center;
@@ -369,19 +377,20 @@ section{padding:120px clamp(20px,4vw,64px);}
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
-.work-card{
-  position:relative;
-  display:block;
-  aspect-ratio:16/9;
-  overflow:hidden;
-  border-radius:2px;
-  background:linear-gradient(160deg,#2b2b26,#131311);
+.work-card {
+  aspect-ratio: 4 / 3;
 }
-.work-card .thumb{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  transition:transform 0.7s var(--ease);
+.work-card .thumb {
+  object-fit: cover;
+  object-position: center;
 }
-.work-card:hover .thumb{transform:scale(1.05);}
+.work-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
 .work-card::after{
   content:"";
   position:absolute;inset:0;
@@ -433,7 +442,11 @@ section{padding:120px clamp(20px,4vw,64px);}
 
 /* ---------- Our Clients (marquee) ---------- */
 #clients{
+<<<<<<< HEAD
   background:#E0D4C7;
+=======
+  /* background:#E0D4C7; */
+>>>>>>> e05d98f (Corrected background colour of the 'Clients' section)
   padding-top:60px;
   padding-bottom:60px;
 }
@@ -470,7 +483,11 @@ section{padding:120px clamp(20px,4vw,64px);}
   opacity:0.85;
 }
 .client-logo img{
+<<<<<<< HEAD
   height:68px;
+=======
+  height:100px;
+>>>>>>> e05d98f (Corrected background colour of the 'Clients' section)
   width:auto;
 }
 .client-logo img.needs-invert{
@@ -555,6 +572,7 @@ section{padding:120px clamp(20px,4vw,64px);}
 #contact::before{
   content:"";
   position:absolute;
+<<<<<<< HEAD
   left:39%;
   bottom:-10%;
   height:104%;
@@ -562,6 +580,15 @@ section{padding:120px clamp(20px,4vw,64px);}
   transform:translateX(-50%);
   background:url("assets/logos/bakari-tree-watermark.svg") center / contain no-repeat;
   opacity:0.065;
+=======
+  left:41%;
+  bottom:8%;
+  height:78%;
+  aspect-ratio:1000 / 1085;
+  transform:translateX(-50%);
+  background:url("assets/logos/bakari-tree-white-watermark.png") center / contain no-repeat;
+  opacity:0.9;
+>>>>>>> e05d98f (Corrected background colour of the 'Clients' section)
   pointer-events:none;
 }
 #contact .contact-grid{position:relative;z-index:1;}
@@ -692,7 +719,11 @@ form.contact-form{width:100%;max-width:440px;scroll-margin-top:100px;}
 
 @media(max-width:900px){
   .contact-grid{grid-template-columns:1fr;min-height:auto;}
+<<<<<<< HEAD
   #contact::before{left:78%;bottom:-3%;height:34%;opacity:0.05;}
+=======
+  #contact::before{left:72%;bottom:3%;height:26%;opacity:0.9;}
+>>>>>>> e05d98f (Corrected background colour of the 'Clients' section)
   .contact-left, .contact-right{padding:56px clamp(20px,6vw,64px);}
 }
 
